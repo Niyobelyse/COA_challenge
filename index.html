@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Gallery</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="animal-container">
+    <div class="animal" onclick="openModal(this)">
+      <img src="./images/fox.png" alt="Fennec fox from India">
+      <div class="animal-content">
+        <h3>Fennec </br>fox</h3>
+        <p>India</p>
+        <a href="#" class="know-more">Know More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="animal" onclick="openModal(this)">
+      <img src="./images/whale.png" alt="Humpback whale from South Africa">
+      <div class="animal-content">
+        <h3>Humpback </br>whale</h3>
+        <p>South Africa</p>
+        <a href="#" class="know-more">Know More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="animal" onclick="openModal(this)">
+      <img src="./images/baboon.png" alt="Common brown baboon from South Africa">
+      <div class="animal-content">
+        <h3>Common brown baboon</h3>
+        <p>South Africa</p>
+        <a href="#" class="know-more">Know More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="animal" onclick="openModal(this)">
+      <img src="./images/deer.png" alt="Spotted deer from India">
+      <div class="animal-content">
+        <h3>Spotted </br>deer</h3>
+        <p>Amazon</p>
+        <a href="#" class="know-more">Know More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modal-img" src="" alt="">
+    </div>
+  </div>
+  <script src="./scripts.js"></script>
+</body>
+</html>

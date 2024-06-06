@@ -1,0 +1,141 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+}
+
+.animal-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    padding-left: 30px;
+}
+
+.animal {
+    position: relative;
+    width: 310px;
+    height: 600px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.animal img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.animal-content {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.animal-content h3 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 8px 10px; 
+}
+
+.animal-content p {
+    margin: 8px 10px; 
+}
+
+.animal-content a {
+    display: none;
+    color: blue; /* Make the link blue */
+    text-decoration: none;
+    margin: 8px 10px; 
+    z-index: 1;
+}
+
+
+.animal:hover {
+    transform: scale(1.05,1.05);
+    filter: blur(100%);
+}
+
+.animal:hover img {
+    filter: grayscale(100%);
+}
+
+.animal:hover .animal-content {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+}
+
+.animal:hover a {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .animal {
+        width: calc(50% - 10px);
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .animal {
+        width: calc(100% - 10px);
+        height: auto;
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.modal img {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
